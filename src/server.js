@@ -18,8 +18,9 @@ router.post('/product/stock', async (ctx, next) => {
   // ctx.body = products
 })
 
+const captchaRandom = require('./captcha')
 router.get('/captcha', async (ctx, next) => {
-  ctx.body = '33445566'
+  ctx.body = captchaRandom.captcha()
 })
 
 const random = require('./random')
